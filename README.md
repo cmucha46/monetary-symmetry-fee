@@ -19,7 +19,8 @@ this external layer — that is what this package is.
 
 ```bash
 cd repo
-python3 -m pytest            # 34 tests
+python3 -m pytest            # 50 tests
+python3 run_flow_channel.py  # Lane H: results/flow_channel_v1.csv (see FLOW_CHANNEL.md)
 python3 run_score.py         # writes results/deterministic_score_v1.csv,
                              # results/deterministic_annual_v1.csv,
                              # results/sensitivity_v1.csv (lane_e_proxy
@@ -46,6 +47,9 @@ src/monetary_symmetry/
   cohort.py   vintage ledger by category
   sfc.py      Treasury/Fed ledger, settlement flows, deferred asset
   score.py    the 3x3 deterministic grid + sensitivity switches
+  flow_channel.py  Lane H: interest-income / reserve-flow channel FRB/US
+              omits -- zero-sum sector flow table, Treasury-use variants,
+              MPC-range demand translation (FLOW_CHANNEL.md)
 tests/        pytest suite (cohort conservation, SFC zero-sum, consolidated
               vs gross identity, fee formula, ZLB, deferred asset, ...)
 data_manifest.md   every input labelled SOURCED / ANCHORED / PLACEHOLDER
