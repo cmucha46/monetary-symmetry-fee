@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "monetary-symmetry"
+version = "2.0.0"
+description = "Monetary Symmetry Fee v2: deterministic loan-cohort + consolidated Treasury/Fed SFC fiscal module (Lane E)"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
