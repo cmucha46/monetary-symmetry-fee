@@ -1,0 +1,38 @@
+{
+ "low": {
+  "gross": 18.09494640871369,
+  "displaced": 12.571333488071236,
+  "premiums": 1.3462287598708196,
+  "employer": 0.5066471691859097,
+  "title2": 4.96,
+  "increment_pre_offsets": 5.523612920642453,
+  "residual": -1.2892630084142764,
+  "residual_accel_moe": -4.354305497382912,
+  "accel_moe": 3.0650424889686354,
+  "enrollee_years_M": 867.97645
+ },
+ "central": {
+  "gross": 24.916896126539182,
+  "displaced": 13.08505790556983,
+  "premiums": 1.931667341510764,
+  "employer": 1.266617922964774,
+  "title2": 6.109999999999999,
+  "increment_pre_offsets": 11.831838220969352,
+  "residual": 2.523552956493816,
+  "residual_accel_moe": -0.5414895324748192,
+  "accel_moe": 3.0650424889686354,
+  "enrollee_years_M": 992.1431799999999
+ },
+ "high": {
+  "gross": 36.15166443248626,
+  "displaced": 13.471217188263012,
+  "premiums": 2.613650126355999,
+  "employer": 2.0265886767436387,
+  "title2": 7.31,
+  "increment_pre_offsets": 22.680447244223245,
+  "residual": 10.730208441123608,
+  "residual_accel_moe": 7.665165952154973,
+  "accel_moe": 3.0650424889686354,
+  "enrollee_years_M": 1114.386
+ }
+}

@@ -1,3 +1,44 @@
+# Monetary Symmetry Fee — full simulation project
+
+**Decision memo: `DECISION_MEMO.md`** (Lane L consolidation) · **Dial
+analysis: `DIAL_ANALYSIS.md`** (Lane K) · MFA module: `mfa/`
+(RESULTS_MFA_V1.md). No number in this project is an official CBO/JCT/CMS
+or Federal Reserve estimate; no official score of H.R.10924 exists.
+
+## Headline verdicts
+
+- **Dial (Q1): NOT point-identified by the dual mandate.** Institutional
+  forecast: 50% floor default-and-hold (most plausible); gradual drift
+  plausible; rule-based 75–90% implausible without Congress legislating a
+  fiscal objective. Prototype's 57.1% corrected — median/mode are the 50%
+  floor; 57.1% is a mean artefact.
+- **$6T hypothesis: FAILS at the forecast dial** (~$4.26T mean, 1.7% prior
+  mass at s=50%). Survives only if the Fed sustains s ≥ 75% (63.2% at 75%,
+  90.1% at 90%) **and** covered base is central-or-better **and** yield
+  transmission τ materially > 0 (τ=0 kills it even at 75%: $5.37T).
+- **Medicare for America (central residual +$2.52T): financed at every
+  dial**, including the 50% floor (+$1.92T surplus). High-stress residual
+  (+$10.73T) financed at no dial. The bill's own Title II ($6.11T central)
+  does more financing work than the fee; state MOE is $0 in FY27–36 under
+  the bill (first payment 2038) — accelerated MOE (+$3.07T) is a labelled
+  project amendment.
+
+## Project map
+
+| Lane | Module / report | Contents |
+|---|---|---|
+| A | `../audit/PROTOTYPE_AUDIT.md` | Prototype reproduction (exact) + audit: all six headlines are arithmetic reproductions, none identified |
+| B/D | `../upstream/TOOLING_VERIFICATION.md`, `../validation/VALIDATION_AND_WEDGE_POC.md` | FRB/US tooling; cross-solver validation to 1.2e-9; wedge POC; fiscal-rule trap (dfpex=1/dfpdbt=0/dfpsrp=0) |
+| E/F | this package (`src/`, RESULTS_V1.md, RESULTS_V2_BASE.md) | Category loan cohorts + consolidated Treasury/Fed SFC ledger; covered-base variants (central $32.54T / strict $24.89T eligible) |
+| G | `../integration/FRBUS_SCENARIOS.md` | FRB/US scenarios by dial: potency 100/61/45.5/35.6%; equal-effect rescale 2.24× at s=75% |
+| H | FLOW_CHANNEL.md, `run_flow_channel.py` | Income-flow channel FRB/US omits: episode narrows gap 5–40%; regime sign depends on Treasury use |
+| I | MONTECARLO_V2.md, `run_montecarlo.py` | 10,000-draw MC over fiscal module; sensitivity ranking (stance path > τ > base variant) |
+| J | `mfa/` (mfa_model.py, RESULTS_MFA_V1.md) | MFA gross cost / residual construction; financing matrix |
+| K | DIAL_ANALYSIS.md | Dial non-identification proof + institutional forecast |
+| L | DECISION_MEMO.md | Final decision memo + $6T verdict |
+
+---
+
 # Monetary Symmetry Fee — model v2 (Lane E: external fiscal / cohort / SFC module)
 
 Deterministic, reproducible fiscal layer for the Monetary Symmetry Fee

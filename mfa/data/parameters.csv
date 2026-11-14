@@ -1,0 +1,46 @@
+parameter,value_low,value_central,value_high,unit,label,source_or_basis
+Medicare Part A avg enrollment 2028->2036,73.1->80.5 (series in code),, ,millions,SOURCED,"CBO Medicare Baseline Feb 2026 (exact series)"
+Medicaid avg monthly enrollment 2028->2036,79->73 (series in code),,,millions,SOURCED,"CBO Medicaid Baseline Feb 2026 (exact series)"
+Medicaid ACA-expansion adults 2028->2036,14->10 (series in code),,,millions,SOURCED,"CBO Medicaid Baseline Feb 2026 (exact series)"
+Dual eligibles 2028,12.0,12.0,12.0,millions,ASSUMPTION,"CMS-scale ~12M duals; +1%/yr assumed"
+Uninsured 2028->2036,31.5->37.0 (series in code),,,millions,ANCHORED,"CBO Feb/May 2026: uninsured ~30M 2026 rising to ~37M 2036 (updates the ~26M in older briefs)"
+ESI covered lives,~169 avg,,,,millions,SOURCED,"CBO Federal Subsidies for Health Insurance Feb 2026 (2026-36 avg 169.0M)"
+Medicaid federal outlays 2028->2036,702->914 (series in code),,,$B,SOURCED,"CBO Medicaid Baseline Feb 2026 (exact series; 2027-36 total $7.80T)"
+Medicare net outlays endpoints,1140 (2027),,1970 (2036),$B,SOURCED,"CBO Budget & Economic Outlook Feb 2026; intervening years geometric interpolation = CONSTRUCTION"
+PTC outlays,88 (2026),,116 (2036),$B,SOURCED,"CBO PTC baseline Feb 2026 (2026-36 PTC total $967B); interpolation = CONSTRUCTION"
+Core per-enrollee cost 2028$ - Medicare non-dual,17500,17500,17500,$/yr,ANCHORED,"Medicare gross spending per Part A enrollee 2027 ~$19.4k incl premiums; plan-paid net of baseline cost-sharing (construction)"
+Core per-enrollee cost 2028$ - duals,32000,32000,32000,$/yr,ANCHORED,"Duals cost roughly 2x non-dual (Medicare+Medicaid combined); construction"
+Core per-enrollee cost 2028$ - Medicaid non-dual,11500,11500,11500,$/yr,ANCHORED,"Federal Medicaid $8.9k/enrollee (2028) grossed at ~65% avg FMAP; USAFacts/MACPAC $10760 per ever-enrolled FY2024 supports order of magnitude"
+Core per-enrollee cost 2028$ - exchange,7800,7800,7800,$/yr,ASSUMPTION,"Benchmark-premium scale"
+Core per-enrollee cost 2028$ - uninsured,6800,6800,6800,$/yr,ASSUMPTION,"Lower average morbidity; some pent-up demand carried in induced-demand parameter"
+Core per-enrollee cost 2028$ - ESI opt-in,8600,8600,8600,$/yr,ASSUMPTION,"Per-covered-life employer-plan cost scale"
+Per-capita cost growth,0.040,0.048,0.058,/yr,ANCHORED,"CBO implied per-enrollee growth: Medicare ~4.9%/yr; Medicaid federal per enrollee ~4.5%/yr (Feb 2026 baselines)"
+Rate factor (s.2206 higher-of + hospitals >=110% + primary/behavioral +30% RVU net of site-neutral),1.03,1.06,1.10,multiplier,ASSUMPTION,"Bill text s.2206 verified; net quantitative effect not scored anywhere"
+Induced demand / capacity response,0.00,0.07,0.15,multiplier,ASSUMPTION,"Task-specified 0-15% range; applied to core benefits all cohorts (simplification - likely overstates for already-insured Medicare cohort)"
+Cost-sharing richness shift (plan pays 80%/100%; no deductible; OOP caps vs baseline cost-sharing),1.02,1.05,1.08,multiplier,ASSUMPTION,"Bill text s.2205 verified; quantitative shift assumed"
+Dental/vision/hearing add-on,400,650,900,$/enrollee-yr 2028$,ASSUMPTION,"Benefits in s.2203; largely absent from baseline Medicare"
+LTSS (HCBS Part B) user share of enrollment,0.03,0.05,0.08,share,ASSUMPTION,"MACPAC: HCBS users were 2.6% of Medicaid enrollees CY2021 under narrower waiver eligibility; MFA threshold (>=1 ADL) is broader"
+LTSS cost per user 2028$,28000,36000,48000,$/yr,ANCHORED,"MACPAC CY2021: >$32000 per HCBS user; ~$55339 per I/DD participant"
+LTSS new-cost factor by origin (Medicaid 0.35 / dual 0.40 / others 1.00),,,,,factor,ASSUMPTION,"Baseline Medicaid already funds HCBS for its enrollees; only eligibility expansion/waiting-list part is new money there"
+Admin rate,0.02,0.03,0.05,share of benefits,ASSUMPTION,"Public-program admin scale (Medicare ~2%); no MFA admin estimate exists"
+s.2206(b)(4) Medicaid rate top-up 2028-33,0.03,0.05,0.08,share of federal Medicaid outlays,ASSUMPTION,"Provision verified in bill text; size tied to Medicaid-vs-MFA rate gap (unscored)"
+s.124 waiting-list clearance total,15,35,60,$B 2028-30,ASSUMPTION,"HCBS waiting lists ~700k people (KFF-scale) x LTSS unit cost x clearance share"
+Transitional-option take-up of exchange population 2028-29,0.25,0.40,0.55,share,ASSUMPTION,Behavioural; unscored
+Uninsured take-up from 2028,0.50,0.70,0.85,share,ASSUMPTION,Auto-enrolment with frictions; unscored
+Compliance / non-opt-out share for displaced cohorts,0.95,0.98,1.00,share,ASSUMPTION,State-waiver and MA-for-America leakage
+ESI opt-in ramp 2031->2036,0.01->0.06,0.02->0.12,0.04->0.22,share of ESI lives,ASSUMPTION,"Large-employer process begins 2031 (s.2202); take-up behavioural"
+Non-dual share of Medicare spending (displacement 2030-32),0.70,0.70,0.70,share,ASSUMPTION,"Duals ~16% of enrolment but ~30% of Medicare spending"
+Duals+expansion share of Medicaid spending (displacement 2033-34),0.40,0.47,0.54,share,ASSUMPTION,Composition of federal Medicaid spending
+Premium bracket shares (<200 / 200-400 / 400-600 / >600 %FPL),0.33/0.28/0.17/0.22,,,,shares,ASSUMPTION,"Simplified CPS-style income distribution of enrolled population (labelled simplification)"
+Avg premium paid per enrollee-yr 2028$ by bracket 2/3/4,800/1900/3200,1100/2400/3900,1400/2900/4600,$/yr,ASSUMPTION,"s.2204: $0 <200% FPL; sliding 200-600%; 8% income cap. NOTE: s.2204(b)(1) cost-referential premium-setting could imply higher full premiums for >600% FPL - model is conservative there"
+Large-employer payroll base 2031,9.5,9.5,9.5,$T,ASSUMPTION,"~70% of ~$13.5T total wages at employers meeting s.125/2202 large-employer tests; +4.2%/yr"
+Employer non-offering share (s.125 8%-of-payroll payers),0.10,0.25,0.40,share,ASSUMPTION,Behavioural; unscored. s.125(c) opt-out contributions EXCLUDED (conservative)
+Title II - TCJA + P.L.119-21 repeal (tax side) FY28-36,3.20,3.90,4.60,$T,ANCHORED,"Analogue ONLY: CBO/JCT estimated extending expiring TCJA provisions would add ~$4.6T to deficits over 10 yrs incl ~$0.6-0.8T interest -> ~$3.8-4.0T revenue; NOT a score of H.R.10924. Interaction: repealing P.L.119-21 also restores its health-spending cuts (not modelled - would raise baseline Medicaid and hence displaced amounts)"
+Title II - payroll add-on 0.9%->4% (+3.1pp above thresholds),0.95,1.15,1.35,$T,ARITHMETIC-ESTIMATE,"0.9% Additional Medicare Tax raises ~$35B/yr mid-2020s; x(3.1/0.9) grown - arithmetic on the existing base; no JCT score"
+Title II - NIIT 3.8%->6.9% (+3.1pp),0.38,0.47,0.56,$T,ARITHMETIC-ESTIMATE,"NIIT at 3.8% raises ~$60B/yr; x(3.1/3.8) grown - arithmetic; no JCT score"
+Title II - 5% surtax AGI >$500k,0.22,0.30,0.40,$T,ASSUMPTION,Analogue-scale ~$30B/yr
+Title II - stepped-up basis repeal,0.13,0.17,0.22,$T,ASSUMPTION,Analogue-scale ~$18B/yr
+Title II - excises + HSA termination,0.08,0.12,0.18,$T,ASSUMPTION,ss.206-209 provisions; small
+State MOE (bill as written),0,0,0,$T FY27-36,SOURCED,"H.R.10924 s.2209: first MOE payment year 2038 - verified from bill text"
+Accelerated-MOE amendment variant (NOT in bill),3.07,3.07,3.07,$T from FY2030,ANCHORED/ASSUMPTION,"Base = state Medicaid own-spending $334.7B FY2024 (Pew/CMS-64 SOURCED) +3%/yr; start year 2030 assumed. Caveat: states still carry Medicaid obligations until 2033/35 - double burden in overlap years"
+Fee cases (fee + consolidated interest FY27-36),4.44 (s50 central),6.71 (s75 central),8.12 (s90 central) + 5.60 (s75 strict),$T,SOURCED (project),"repo/results/deterministic_score_v2.csv Lane F corrected base beta=0.88: s50 central 4.4415; s75 strict 5.6009; s75 central 6.7113; s90 central 8.1176"
