@@ -1,5 +1,28 @@
 # Data manifest — Monetary Symmetry Fee model v2 (Lane E)
 
+## V2 addendum — Lane F covered-base correction (2026-11-13)
+
+Corrected variants (`covered_base_variant` in `config.py`) use LOAN levels
+retrieved live 2026-11-13; full table in RESULTS_V2_BASE.md.
+
+| Input | Value (2025) | Status | Source |
+|---|---|---|---|
+| Household-sector mortgages | $14,356.4B | SOURCED | Z.1 L.217 line 7, FL153165005, release Mar 19, 2026 |
+| Total mortgages (1–4 / multifamily / commercial / farm) | $21,559.6B (14,770.1 / 2,446.7 / 3,957.0 / 385.9) | SOURCED | Z.1 L.217 lines 1–5, same release |
+| Agency/GSE pools; ABS mortgage assets | $3,209.9B; $1,099.3B | SOURCED | Z.1 L.217 lines 37, 43, same release |
+| Nonfinancial business loans | $13,418.5B = depository n.e.c. 2,869.4 + other loans 3,345.9 + mortgages 7,203.2 | SOURCED | Z.1 L.102 lines 29–32, same release |
+| Business debt securities (excluded: not loans) | $8,790.8B (bonds 7,924.1 / CP 215.0 / munis 651.7) | SOURCED | Z.1 L.102 lines 25–28, same release |
+| Household loans total | $20,702.1B | SOURCED | Z.1 L.214 line 12, FL154123005, same release |
+| Consumer credit, private holders | $3,520.9B of $5,098.8B total (fed-govt holder $1,578.0B excluded) | SOURCED | G.19 release Nov 6, 2026 (2025 annual; holders NSA) |
+| Bank C&I cross-check | $2,769.3B, Aug 2025 | SOURCED | H.8 Table 2, release Sep 19, 2025 (FRASER) |
+| Other-category stock | $1,246.9B | ANCHORED | Residual: household loans 20,702.1 − mortgages 14,356.4 − consumer 5,098.8 |
+| Strict-variant pool allocations | — | PLACEHOLDER (labelled approximation) | Agency pools → mortgage bucket; ABS mortgages → business bucket; business "other loans" bucket excluded whole (L.216 holder split not retrieved) |
+
+Gaps: G.19 total securitised consumer pools (only depository slice
+~$15.4B, Aug 2026, FRED DTCNLHDNM retrieved); FFIEC/FDIC Call Report
+aggregates not retrieved directly (H.8 is Call-Report-benchmarked);
+Sept 2026 Z.1 private-credit revision postdates the March vintage used.
+
 Every input is labelled **SOURCED** (published figure, cited below),
 **ANCHORED** (built from sourced figures by stated arithmetic), or
 **PLACEHOLDER** (judgmental, not estimated — must not be quoted as data).

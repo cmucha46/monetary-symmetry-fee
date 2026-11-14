@@ -65,3 +65,110 @@ CATEGORIES = [
              turnover=0.30, avg_maturity_years=10.0, avoidance_per_fee_pp=0.065),
 ]
 TOTAL_START_STOCK = sum(c.start_stock for c in CATEGORIES)  # 44.224 $T
+
+# ---------------------------------------------------------------------------
+# Lane F (v2): corrected covered-base variants.
+#
+# Interpretation adopted (brief, Statutory counterfactual): the fee falls on
+# outstanding principal of newly originated covered PRIVATE LOANS; the lender
+# remits. Debt securities (corporate bonds, commercial paper, municipal
+# securities issued by businesses) are NOT loans and are NOT covered.
+# Securitisation does NOT remove principal from the base in the central
+# interpretation: the originating/servicing lender remits ONCE on the loan;
+# the MBS/ABS holder is not charged again (brief: "prevent double taxation
+# of the same principal"). The strict variant instead reads coverage as
+# portfolio loans only and excludes securitised pools. Loans held by the
+# FEDERAL GOVERNMENT as lender (e.g. Direct student loans in G.19) are not
+# private credit and are excluded in both corrected variants.
+#
+# Stocks below are LOAN-INSTRUMENT totals by borrower bucket (mutually
+# exclusive, as in v1: business mortgages sit inside `business`, NOT in
+# `mortgage`; `mortgage` is household-sector mortgages only). Source for all
+# corrected figures: Federal Reserve Z.1, release of March 19, 2026 (data
+# through 2025-12-31) and G.19 release of November 6, 2026 (2025 annual).
+# Full sourcing table: RESULTS_V2_BASE.md and data_manifest.md (v2 addendum).
+#
+#   mortgage stock 14.356 = household-sector mortgages, Z.1 L.217 line 7
+#                           (FL153165005, $14,356.4B, 2025)
+#   consumer stock  5.099 = G.19 total consumer credit owned & securitised,
+#                           2025 ($5,098.8B); private-holder portion
+#                           $3,520.9B (depository 2,074.2 + finance cos 713.6
+#                           + credit unions 721.3 + nonprofit 11.8); the
+#                           federal-government holder portion ($1,578.0B,
+#                           mostly Direct student loans) is excluded via
+#                           covered_share = 3520.9/5098.8 = 0.69057
+#   business stock 13.419 = nonfinancial business LOANS, Z.1 L.102 line 29
+#                           (FL144123005, $13,418.5B, 2025) = depository
+#                           loans n.e.c. 2,869.4 + other loans & advances
+#                           3,345.9 + business mortgages 7,203.2. Excluded
+#                           from the v1 stock: debt securities $8,790.8B
+#                           (corporate bonds 7,924.1 + CP 215.0 + munis
+#                           651.7, L.102 lines 25-28) and FDI debt 316.6.
+#   other stock     1.247 = ANCHORED residual: household loans total
+#                           $20,702.1B (Z.1 L.214 line 12, FL154123005)
+#                           - household mortgages 14,356.4 - consumer 5,098.8
+#
+# Strict (loans_only) covered shares additionally remove:
+#   mortgage: agency- & GSE-backed mortgage pools $3,209.9B (L.217 line 37,
+#             overwhelmingly household 1-4-family backed; borrower split of
+#             pools not published in the retrieved table -- approximation,
+#             labelled in RESULTS_V2_BASE.md)
+#   business: the whole "other loans and advances" bucket $3,345.9B (holder
+#             split into direct nonbank loans vs ABS/CLO and federal
+#             programmes not retrieved) plus ABS issuers' mortgage assets
+#             $1,099.3B (L.217 line 43, allocated to business as an
+#             approximation -- CRE/multifamily dominate ABS mortgage pools)
+#   consumer/other: no further removal (G.19 footnote 1: securitised pools
+#             mostly remain on originator balance sheets; FRED series
+#             DTCNLHDNM shows depositories' securitised consumer credit of
+#             only ~$15.4B in Aug 2026 -- gap labelled in RESULTS_V2_BASE.md)
+_BEHAVIOUR = {  # per-category behavioural params, identical across variants
+    c.name: (c.fixed_share, c.turnover, c.avg_maturity_years, c.avoidance_per_fee_pp)
+    for c in CATEGORIES
+}
+
+
+def _variant_category(name, stock, covered):
+    fixed, turnover, maturity, avoidance = _BEHAVIOUR[name]
+    return Category(name, start_stock=stock, covered_share=covered,
+                    fixed_share=fixed, turnover=turnover,
+                    avg_maturity_years=maturity, avoidance_per_fee_pp=avoidance)
+
+
+COVERED_BASE_VARIANTS = {
+    # v1 exactly (upper bound / replication): total business debt x 0.70 proxy.
+    "lane_e_proxy": list(CATEGORIES),
+    # CENTRAL (recommended): all private loan principal, securitised loans
+    # counted once, federal-government-held consumer credit excluded.
+    "loans_plus_securitized": [
+        _variant_category("mortgage", 14.356, 1.0),
+        _variant_category("consumer", 5.099, 0.69057),
+        _variant_category("business", 13.419, 1.0),
+        _variant_category("other", 1.247, 1.0),
+    ],
+    # LOW / strict: portfolio loans only; securitised pools and the
+    # unsplittable nonbank "other loans" bucket excluded (see notes above).
+    "loans_only": [
+        _variant_category("mortgage", 14.356, (14356.4 - 3209.9) / 14356.4),
+        _variant_category("consumer", 5.099, 0.69057),
+        _variant_category("business", 13.419, (13418.5 - 3345.9 - 1099.3) / 13418.5),
+        _variant_category("other", 1.247, 1.0),
+    ],
+}
+DEFAULT_COVERED_BASE_VARIANT = "loans_plus_securitized"
+
+
+def categories_for_variant(variant: str = DEFAULT_COVERED_BASE_VARIANT):
+    """Category list for a covered-base variant (default: Lane F central)."""
+    try:
+        return COVERED_BASE_VARIANTS[variant]
+    except KeyError:
+        raise ValueError(
+            f"unknown covered_base_variant {variant!r}; "
+            f"choose from {sorted(COVERED_BASE_VARIANTS)}") from None
+
+
+def eligible_base(variant: str = DEFAULT_COVERED_BASE_VARIANT) -> dict:
+    """Eligible (covered) starting principal by category, $T."""
+    return {c.name: c.start_stock * c.covered_share
+            for c in categories_for_variant(variant)}

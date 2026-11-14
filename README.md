@@ -19,11 +19,21 @@ this external layer — that is what this package is.
 
 ```bash
 cd repo
-python3 -m pytest            # 28 tests
+python3 -m pytest            # 34 tests
 python3 run_score.py         # writes results/deterministic_score_v1.csv,
                              # results/deterministic_annual_v1.csv,
-                             # results/sensitivity_v1.csv
+                             # results/sensitivity_v1.csv (lane_e_proxy
+                             # variant, values identical to v1) plus the
+                             # Lane F v2 files below
 ```
+
+**Lane F (v2) covered-base variants** — `covered_base_variant` in
+`config.py` / `score.run_scenario`: `lane_e_proxy` (v1: total business
+debt × 0.70), `loans_plus_securitized` (**default, central**: loan
+principal only, securitised loans counted once, federal-government-held
+consumer credit excluded) and `loans_only` (strict low bound: portfolio
+loans only). Outputs: `results/deterministic_score_v2.csv`,
+`results/deterministic_annual_v2.csv`; write-up in `RESULTS_V2_BASE.md`.
 
 No third-party dependencies (standard library only). Python ≥ 3.10.
 
