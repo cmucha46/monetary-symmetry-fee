@@ -1,0 +1,4 @@
+corrected MCE infl shock size: {'xgdp_trough_pct': -2.03, 'lur_peak_dev_pp': 0.98, 'picxfe_peak_dev_pp': 4.37, 'rff_peak_dev_pp': 2.6}
+D_b100 redone, 7 iterations
+D_b075 redone, 6 iterations
+run_log patched

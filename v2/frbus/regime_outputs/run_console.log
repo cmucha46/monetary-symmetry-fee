@@ -1,0 +1,29 @@
+[mce] shock infl: {'xgdp_trough_pct': -11.30970949764638, 'lur_peak_dev_pp': 4.955116752124058, 'picxfe_peak_dev_pp': 26.851724769629357, 'rff_peak_dev_pp': 16.249587841356107}
+[mce] shock rec: {'xgdp_trough_pct': -4.249361594919476, 'lur_peak_dev_pp': 2.0481570121718136, 'picxfe_peak_dev_pp': -0.02603144374880695, 'rff_peak_dev_pp': -0.00815143925938866}
+[mce] B_b100: OK in 42s, 7 iterations
+[mce] B_b075: OK in 32s, 6 iterations
+[mce] B_b050: OK in 30s, 5 iterations
+[mce] B_b100_k1: OK in 47s, 7 iterations
+[mce] C_b100: OK in 39s, 7 iterations
+[mce] C_b075: OK in 31s, 6 iterations
+[mce] C_b050: OK in 26s, 5 iterations
+[mce] C_b100_k1: OK in 35s, 7 iterations
+[mce] D_b100: OK in 46s, 6 iterations
+[mce] D_b075: OK in 44s, 5 iterations
+[mce] E_b100: OK in 44s, 5 iterations
+[mce] E_b075: OK in 36s, 4 iterations
+[var] shock infl: {'xgdp_trough_pct': -1.7300472047418358, 'lur_peak_dev_pp': 0.774185860290868, 'picxfe_peak_dev_pp': 4.459067898014444, 'rff_peak_dev_pp': 2.1536754079213436}
+[var] shock rec: {'xgdp_trough_pct': -4.5513071911697285, 'lur_peak_dev_pp': 2.284708768692205, 'picxfe_peak_dev_pp': 7.170883552287677e-05, 'rff_peak_dev_pp': 0.6274916226541172}
+[var] B_b100: OK in 4s, 6 iterations
+[var] B_b075: OK in 3s, 5 iterations
+[var] B_b050: OK in 3s, 4 iterations
+[var] B_b100_k1: OK in 4s, 6 iterations
+[var] C_b100: OK in 3s, 6 iterations
+[var] C_b075: OK in 3s, 5 iterations
+[var] C_b050: OK in 2s, 4 iterations
+[var] C_b100_k1: OK in 4s, 6 iterations
+[var] D_b100: OK in 4s, 6 iterations
+[var] D_b075: OK in 3s, 5 iterations
+[var] E_b100: OK in 3s, 5 iterations
+[var] E_b075: OK in 3s, 4 iterations
+DONE 512.5654981136322
