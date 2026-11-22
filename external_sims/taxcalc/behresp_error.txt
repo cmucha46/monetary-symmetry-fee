@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/taxcalc/run_score.py", line 57, in <module>
+    cr_beh = behresp.response(cb, cr, {"sub": [0.25]})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/taxcalc/venv/lib/python3.12/site-packages/taxcalc/behresp.py", line 506, in response
+    assert be_sub >= 0.0
+           ^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'list' and 'float'

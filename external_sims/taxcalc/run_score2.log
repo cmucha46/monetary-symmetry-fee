@@ -1,0 +1,25 @@
+reform dict keys 92
+warnings: n/a
+errors: {}
+reform STD 2028 [[ 9246.44 18492.92  9246.44 13614.85 18492.92]] II_em [5897.34] SALT [[9.e+99 9.e+99 9.e+99 9.e+99 9.e+99]]
+records start year 2014
+2028 base=$2227.1B reform=$2537.5B diff=$310.3B
+2029 base=$2341.4B reform=$2639.3B diff=$297.9B
+2030 base=$2476.2B reform=$2750.8B diff=$274.6B
+2031 base=$2584.4B reform=$2865.2B diff=$280.8B
+2032 base=$2696.9B reform=$2983.1B diff=$286.2B
+2033 base=$2810.4B reform=$3102.0B diff=$291.7B
+2034 base=$2930.0B reform=$3227.1B diff=$297.1B
+2035 base=$3054.3B reform=$3356.4B diff=$302.1B
+2036 base=$3163.1B reform=$3469.7B diff=$306.6B
+Traceback (most recent call last):
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/taxcalc/run_score.py", line 57, in <module>
+    cr_beh = behresp.response(cb, cr, {"sub": [0.25]})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/taxcalc/venv/lib/python3.12/site-packages/taxcalc/behresp.py", line 506, in response
+    assert be_sub >= 0.0
+           ^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'list' and 'float'
+TOTAL 2028-36 diff $B 2647.3636476082247
+behresp functions: ['Calculator', 'DIST_VARIABLES', 'ESF_BISECTION_STEPS', 'ESF_PARAMS', 'Records', 'bisect', 'copy', 'employer_ptax_on_wages', 'labor_response', 'np', 'pch_response', 'quantity_response', 'response']
+(calc_1, calc_2, elasticities, dump=False)

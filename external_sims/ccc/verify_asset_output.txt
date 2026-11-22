@@ -1,0 +1,30 @@
+
+--- year 2026: calc_by_asset major groups ---
+           asset_name     tax_treat  metr_mix  mettr_mix  ucc_mix  rho_mix    delta
+          Inventories     corporate  0.170127   0.291053 0.066034 0.066034 0.000000
+                 Land     corporate  0.138131   0.263719 0.063583 0.063583 0.000000
+          Inventories non-corporate  0.335863   0.335863 0.069142 0.069142 0.000000
+                 Land non-corporate  0.293332   0.293332 0.064981 0.064981 0.000000
+Intellectual Property     corporate -0.090973   0.067999 0.226672 0.050230 0.176441
+Intellectual Property non-corporate -0.024278  -0.024278 0.230438 0.044832 0.185606
+            Equipment     corporate -0.090973   0.067999 0.195613 0.050230 0.145382
+           Structures     corporate  0.044644   0.183854 0.089838 0.057361 0.032478
+            Equipment non-corporate -0.024278  -0.024278 0.201162 0.044832 0.156331
+           Structures non-corporate  0.229270   0.229270 0.084535 0.059580 0.024955
+              Overall     corporate  0.037279   0.177562 0.118539 0.056922 0.061617
+              Overall non-corporate  0.250143   0.250143 0.087629 0.061238 0.026390
+
+--- year 2017: calc_by_asset major groups ---
+           asset_name     tax_treat  metr_mix  mettr_mix  ucc_mix  rho_mix    delta
+          Inventories     corporate  0.286936   0.382942 0.078198 0.078198 0.000000
+                 Land     corporate  0.247175   0.348534 0.074068 0.074068 0.000000
+          Inventories non-corporate  0.343966   0.343966 0.072149 0.072149 0.000000
+                 Land non-corporate  0.307109   0.307109 0.068311 0.068311 0.000000
+Intellectual Property     corporate -0.070816   0.073356 0.228514 0.052072 0.176441
+Intellectual Property non-corporate  0.026802   0.026802 0.234242 0.048636 0.185606
+            Equipment     corporate  0.004706   0.138710 0.201406 0.056024 0.145382
+           Structures     corporate  0.129371   0.246590 0.096523 0.064046 0.032478
+            Equipment non-corporate  0.100505   0.100505 0.208952 0.052621 0.156331
+           Structures non-corporate  0.245542   0.245542 0.087692 0.062737 0.024955
+              Overall     corporate  0.129998   0.247133 0.125709 0.064092 0.061617
+              Overall non-corporate  0.271051   0.271051 0.091322 0.064932 0.026390

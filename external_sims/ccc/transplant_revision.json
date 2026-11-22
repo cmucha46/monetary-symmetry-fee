@@ -1,0 +1,92 @@
+{
+  "CIT_rate": [
+    {
+      "year": 2026,
+      "value": 0.35
+    }
+  ],
+  "CIT_rate_ded": [
+    {
+      "year": 2026,
+      "value": 0.35
+    }
+  ],
+  "BonusDeprec_3yr": [
+    {
+      "year": 2026,
+      "value": 0.5
+    }
+  ],
+  "BonusDeprec_5yr": [
+    {
+      "year": 2026,
+      "value": 0.5
+    }
+  ],
+  "BonusDeprec_7yr": [
+    {
+      "year": 2026,
+      "value": 0.5
+    }
+  ],
+  "BonusDeprec_10yr": [
+    {
+      "year": 2026,
+      "value": 0.5
+    }
+  ],
+  "BonusDeprec_15yr": [
+    {
+      "year": 2026,
+      "value": 0.5
+    }
+  ],
+  "BonusDeprec_20yr": [
+    {
+      "year": 2026,
+      "value": 0.5
+    }
+  ],
+  "tau_pt": [
+    {
+      "year": 2026,
+      "value": 0.3309281916190464
+    }
+  ],
+  "tau_div": [
+    {
+      "year": 2026,
+      "value": 0.15709863807667093
+    }
+  ],
+  "tau_int": [
+    {
+      "year": 2026,
+      "value": 0.3087189158783754
+    }
+  ],
+  "tau_scg": [
+    {
+      "year": 2026,
+      "value": 0.303512014153121
+    }
+  ],
+  "tau_lcg": [
+    {
+      "year": 2026,
+      "value": 0.18021829061367983
+    }
+  ],
+  "tau_td": [
+    {
+      "year": 2026,
+      "value": 0.22460068246527
+    }
+  ],
+  "tau_h": [
+    {
+      "year": 2026,
+      "value": 0.1471002257141419
+    }
+  ]
+}

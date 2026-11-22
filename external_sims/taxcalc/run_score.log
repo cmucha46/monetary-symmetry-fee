@@ -1,0 +1,20 @@
+reform dict keys 90
+warnings: n/a
+errors: {}
+reform STD 2028 [[ 9246.44 18492.92  9246.44 13614.85 18492.92]] II_em [5897.34] SALT [[9.e+99 9.e+99 9.e+99 9.e+99 9.e+99]]
+records start year 2014
+Traceback (most recent call last):
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/taxcalc/run_score.py", line 27, in <module>
+    calc_reform.advance_to_year(year); calc_reform.calc_all()
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/taxcalc/venv/lib/python3.12/site-packages/taxcalc/calculator.py", line 173, in calc_all
+    self._calc_one_year(zero_out_calc_vars)
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/taxcalc/venv/lib/python3.12/site-packages/taxcalc/calculator.py", line 1435, in _calc_one_year
+    ItemDed(self.__policy, self.__records)
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/taxcalc/venv/lib/python3.12/site-packages/taxcalc/decorators.py", line 507, in wrapper
+    ans = high_level_fn(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 12, in hl_func
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/taxcalc/venv/lib/python3.12/site-packages/taxcalc/calcfunctions.py", line 1472, in ItemDed
+    assert c21040 <= 0.0, 'Pease and OBBBA cannot both be in effect'
+AssertionError: Pease and OBBBA cannot both be in effect

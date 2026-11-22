@@ -1,0 +1,56 @@
+[
+  {
+    "year": 2028,
+    "baseline_iitax_billions": 2227.122627724672,
+    "reform_behresp_iitax_billions": 2480.8878721165765,
+    "diff_revenue_billions": 253.7652443919048
+  },
+  {
+    "year": 2029,
+    "baseline_iitax_billions": 2341.4264079978966,
+    "reform_behresp_iitax_billions": 2579.8701483634027,
+    "diff_revenue_billions": 238.44374036550636
+  },
+  {
+    "year": 2030,
+    "baseline_iitax_billions": 2476.175821671444,
+    "reform_behresp_iitax_billions": 2686.3652382084024,
+    "diff_revenue_billions": 210.1894165369585
+  },
+  {
+    "year": 2031,
+    "baseline_iitax_billions": 2584.3830466332815,
+    "reform_behresp_iitax_billions": 2798.4579653207993,
+    "diff_revenue_billions": 214.07491868751757
+  },
+  {
+    "year": 2032,
+    "baseline_iitax_billions": 2696.886758829663,
+    "reform_behresp_iitax_billions": 2913.7986728799383,
+    "diff_revenue_billions": 216.91191405027539
+  },
+  {
+    "year": 2033,
+    "baseline_iitax_billions": 2810.361655588055,
+    "reform_behresp_iitax_billions": 3029.8071969579064,
+    "diff_revenue_billions": 219.44554136985155
+  },
+  {
+    "year": 2034,
+    "baseline_iitax_billions": 2929.9916436250264,
+    "reform_behresp_iitax_billions": 3152.199682645003,
+    "diff_revenue_billions": 222.20803901997655
+  },
+  {
+    "year": 2035,
+    "baseline_iitax_billions": 3054.2742917249343,
+    "reform_behresp_iitax_billions": 3278.8295767808763,
+    "diff_revenue_billions": 224.5552850559424
+  },
+  {
+    "year": 2036,
+    "baseline_iitax_billions": 3163.0519048688298,
+    "reform_behresp_iitax_billions": 3390.242998264385,
+    "diff_revenue_billions": 227.19109339555519
+  }
+]

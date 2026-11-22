@@ -1,0 +1,140 @@
+
+=== summary_table metr: baseline=current law (2026), reform=pre-TCJA law (2017) ===
+                       Marginal Effective Tax Rate Under Baseline Policy  Marginal Effective Tax Rate Under Reform Policy  Change from Baseline (pp)
+              Overall                                           6.946880                                        15.005972                   8.059092
+         Corporations                                           3.727894                                        14.497604                  10.769710
+      Equity Financed                                          11.698817                                        24.826677                  13.127860
+        Debt Financed                                         -25.216665                                       -31.207843                  -5.991178
+Pass-Through Entities                                          25.014298                                        29.280023                   4.265725
+      Equity Financed                                          26.757719                                        30.380950                   3.623231
+        Debt Financed                                          16.977097                                        24.520993                   7.543896
+
+=== asset_summary_table metr (mix financing) ===
+                Category  Marginal Effective Tax Rate Under Baseline Policy  Marginal Effective Tax Rate Under Reform Policy  Change from Baseline (pp)
+                 Overall                                           6.946880                                        15.005972                   8.059092
+               Corporate                                           3.727894                                        14.497604                  10.769710
+               Equipment                                          -9.097280                                         2.184117                  11.281397
+              Structures                                           4.464408                                        14.435989                   9.971581
+   Intellectual Property                                          -9.097280                                        -5.238041                   3.859239
+             Inventories                                          17.012718                                        29.921288                  12.908570
+                    Land                                          13.813149                                        26.013626                  12.200477
+            Pass-through                                          25.014298                                        29.280023                   4.265725
+               Equipment                                          -2.427775                                        12.734189                  15.161964
+              Structures                                          22.927011                                        26.805155                   3.878144
+   Intellectual Property                                          -2.427775                                         5.583857                   8.011632
+             Inventories                                          33.586251                                        36.353965                   2.767714
+                    Land                                          29.333182                                        32.778166                   3.444984
+
+=== summary_table mettr: baseline=current law (2026), reform=pre-TCJA law (2017) ===
+                       Marginal Effective Total Tax Rate Under Baseline Policy  Marginal Effective Total Tax Rate Under Reform Policy  Change from Baseline (pp)
+              Overall                                                20.506178                                              27.390934                   6.884756
+         Corporations                                                17.756248                                              26.956643                   9.200395
+      Equity Financed                                                20.605396                                              32.409102                  11.803706
+        Debt Financed                                                 7.449457                                               3.021238                  -4.428219
+Pass-Through Entities                                                25.014298                                              29.280023                   4.265725
+      Equity Financed                                                26.757719                                              30.380950                   3.623231
+        Debt Financed                                                16.977097                                              24.520993                   7.543896
+
+=== asset_summary_table mettr (mix financing) ===
+                Category  Marginal Effective Total Tax Rate Under Baseline Policy  Marginal Effective Total Tax Rate Under Reform Policy  Change from Baseline (pp)
+                 Overall                                                20.506178                                              27.390934                   6.884756
+               Corporate                                                17.756248                                              26.956643                   9.200395
+               Equipment                                                 6.799904                                              16.437424                   9.637520
+              Structures                                                18.385441                                              26.904006                   8.518566
+   Intellectual Property                                                 6.799904                                              10.096791                   3.296887
+             Inventories                                                29.105266                                              40.132854                  11.027589
+                    Land                                                26.371924                                              36.794600                  10.422676
+            Pass-through                                                25.014298                                              29.280023                   4.265725
+               Equipment                                                -2.427775                                              12.734189                  15.161964
+              Structures                                                22.927011                                              26.805155                   3.878144
+   Intellectual Property                                                -2.427775                                               5.583857                   8.011632
+             Inventories                                                33.586251                                              36.353965                   2.767714
+                    Land                                                29.333182                                              32.778166                   3.444984
+
+=== summary_table ucc: baseline=current law (2026), reform=pre-TCJA law (2017) ===
+                       User Cost of Capital Under Baseline Policy  User Cost of Capital Under Reform Policy  Change from Baseline (pp)
+              Overall                                   10.443740                                 11.002142                   0.558402
+         Corporations                                   11.853873                                 12.570851                   0.716978
+      Equity Financed                                   12.730102                                 13.877177                   1.147075
+        Debt Financed                                    9.995029                                  9.819991                  -0.175038
+Pass-Through Entities                                    8.762860                                  9.132240                   0.369380
+      Equity Financed                                    9.759207                                 10.129767                   0.370560
+        Debt Financed                                    6.332905                                  6.702096                   0.369191
+
+=== asset_summary_table ucc (mix financing) ===
+                Category  User Cost of Capital Under Baseline Policy  User Cost of Capital Under Reform Policy  Change from Baseline (pp)
+                 Overall                                   10.443740                                 11.002142                   0.558402
+               Corporate                                   11.853873                                 12.570851                   0.716978
+               Equipment                                   19.561260                                 20.140583                   0.579322
+              Structures                                    8.983846                                  9.652326                   0.668480
+   Intellectual Property                                   22.667181                                 22.851383                   0.184203
+             Inventories                                    6.603421                                  7.819778                   1.216357
+                    Land                                    6.358278                                  7.406769                   1.048491
+            Pass-through                                    8.762860                                  9.132240                   0.369380
+               Equipment                                   20.116242                                 20.895166                   0.778924
+              Structures                                    8.453503                                  8.769180                   0.315677
+   Intellectual Property                                   23.043760                                 23.424175                   0.380416
+             Inventories                                    6.914223                                  7.214895                   0.300672
+                    Land                                    6.498091                                  6.831106                   0.333014
+Traceback (most recent call last):
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/ccc/run_ccc.py", line 68, in <module>
+    calc_tr, rev_used = make_transplant_calc()
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/ccc/run_ccc.py", line 46, in make_transplant_calc
+    p.update_specification(rev)
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/ccc/venv/lib/python3.12/site-packages/ccc/parameters.py", line 269, in update_specification
+    self.adjust(revision, raise_errors=raise_errors)
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/ccc/venv/lib/python3.12/site-packages/paramtools/parameters.py", line 257, in adjust
+    return self._adjust(
+           ^^^^^^^^^^^^^
+  File "/home/hatch/workspace/monetary-symmetry/external_sims/ccc/venv/lib/python3.12/site-packages/paramtools/parameters.py", line 375, in _adjust
+    raise self.validation_error
+paramtools.exceptions.ValidationError: {
+    "errors": {
+        "CIT_rate": [
+            "Not a valid number: {2026: [0.35]}."
+        ],
+        "CIT_rate_ded": [
+            "Not a valid number: {2026: [0.35]}."
+        ],
+        "BonusDeprec_3yr": [
+            "Not a valid number: {2026: [0.5]}."
+        ],
+        "BonusDeprec_5yr": [
+            "Not a valid number: {2026: [0.5]}."
+        ],
+        "BonusDeprec_7yr": [
+            "Not a valid number: {2026: [0.5]}."
+        ],
+        "BonusDeprec_10yr": [
+            "Not a valid number: {2026: [0.5]}."
+        ],
+        "BonusDeprec_15yr": [
+            "Not a valid number: {2026: [0.5]}."
+        ],
+        "BonusDeprec_20yr": [
+            "Not a valid number: {2026: [0.5]}."
+        ],
+        "tau_pt": [
+            "Not a valid number: {2026: [0.3309281916190464]}."
+        ],
+        "tau_div": [
+            "Not a valid number: {2026: [0.15709863807667093]}."
+        ],
+        "tau_int": [
+            "Not a valid number: {2026: [0.3087189158783754]}."
+        ],
+        "tau_scg": [
+            "Not a valid number: {2026: [0.303512014153121]}."
+        ],
+        "tau_lcg": [
+            "Not a valid number: {2026: [0.18021829061367983]}."
+        ],
+        "tau_td": [
+            "Not a valid number: {2026: [0.22460068246527]}."
+        ],
+        "tau_h": [
+            "Not a valid number: {2026: [0.1471002257141419]}."
+        ]
+    }
+}
