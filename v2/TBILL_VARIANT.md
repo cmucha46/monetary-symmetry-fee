@@ -491,6 +491,78 @@ implicit pace.
    a real one might. This is the variant's deepest unpriced
    risk, and it is institutional, not arithmetical.
 
+## 11. All-in presentation (sponsor-requested)
+
+*Added at the sponsor's request. This section re-presents
+figures computed in §4–§6 and in the combined study; it adds
+no new modeling and displaces no headline figure. All figures:
+combined plan, central case, FY2027–36, τ_long = 0, $B, unless
+stated.*
+
+**The fee swing on the study basis.** The swing — the fee
+side's all-in contribution, stated as the §5 restated coverage
+margin plus the MFA central residual that margin is measured
+against ($2,524B):
+
+| Spread scenario | Restated margin (§5) | + MFA residual | = Fee swing |
+|---|---:|---:|---:|
+| Δspread = 0 | +2,634 | 2,524 | **5,158** |
+| S∞ = +25bp | +2,307 | 2,524 | **4,831** |
+| S∞ = +50bp (headline) | +1,977 | 2,524 | **4,501** |
+| S∞ = +100bp | +1,305 | 2,524 | **3,829** |
+
+**Customary spread.** The grid above stresses the spread
+upward from the Δspread = 0 case. The §4 spread schedule also
+evaluates in the other direction: at an asymptote of
+S∞ = −14bp — the full-sample median bill–IORB spread in the
+combined study's exhibit (2008–2026) — the variant engine
+computes a gain of $2,636B and a fee swing of **$5,338B**
+(COMPUTED by direct evaluation of the spread machinery at the
+−14bp asymptote, not interpolated; a linear interpolation of
+the §5 toll schedule, ≈$326B per 25bp, gives $5,341B — the two
+bases differ by $3B).
+
+**Term premium, added only here (ASSUMED grid, §6).** The §6
+exhibit prices the maturity policy's own saving at **+$747B
+(TP = 50bp)** and **+$1,493B (TP = 100bp)**. The standing note
+of §6 applies with full force: this saving is attributable to
+the maturity policy, not the fee — bill financing has usually
+been cheaper for reasons unrelated to this plan — and it is
+excluded from every coverage margin elsewhere in this report.
+It is added in this section only because an all-in presentation
+of the combined legislation's total fiscal effect is what was
+requested.
+
+**All-in totals (fee swing + term premium):**
+
+| Basis | + TP 50bp | + TP 100bp |
+|---|---:|---:|
+| Customary spread (S∞ = −14bp, computed) | 6,085 | 6,831 |
+| Δspread = 0 | 5,905 | 6,651 |
+| Headline spread (S∞ = +50bp) | 5,248 | 5,994 |
+
+**Without the variant.** On the same consolidation basis, with
+no maturity migration, the fee swing is **$2,703B–$4,056B**
+across τ_long (combined-study margins of +$179B / +$634B /
++$1,085B / +$1,532B, each plus the $2,524B residual), and there
+is no term-premium line: the §6 saving exists only on the
+excess bill stock the variant creates.
+
+**Reading.** The $6–7T figures in the first row are the all-in
+BOUND, not an estimate: reaching them requires the customary
+(negative) spread to hold at an unprecedented bill stock, the
+term premium counted in, and the favorable end of its ASSUMED
+grid, simultaneously — the joint-corner construction the §9
+envelope check warns against. The headline of this report is
+unchanged: **$4,501B** at the stress spread (S∞ = +50bp) with
+the term premium excluded. A reader who disputes any layer of
+the stack can remove it from the tables above and land on a
+figure stated elsewhere in this report. The FRB/US basis
+(combined margin ≈ +$7.5T, unified-scaled) is NOT used anywhere
+in this section: Title II enters that basis as demand-neutral
+receipts with no incidence carrier, and the combined study
+carries it as an upper bound only.
+
 ## Appendix — files, code, tests
 
 Code: `v2/tbill_variant/tbill_variant.py` (engine, spread
