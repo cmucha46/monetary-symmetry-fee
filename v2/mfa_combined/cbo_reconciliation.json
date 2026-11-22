@@ -1,0 +1,19 @@
+{
+  "cbo_per_01pp_bn": 379.0,
+  "headline_decline_pp": 0.975,
+  "model_flat_consol_total_bn": 938.5528877335651,
+  "model_flat_gross_total_bn": 1096.584373049836,
+  "model_per_01pp_consol_bn": 96.26183463934001,
+  "model_per_01pp_gross_bn": 112.47019210767547,
+  "instant_full_repricing_flat_bn": 2656.18275,
+  "effective_avg_decline_pp": 0.3445128410461313,
+  "repricing_realization_share": 0.3533465036370578,
+  "fed_share_wedge_bn": 158.03148531627085,
+  "delta_remittances_bn": 409.74570000000006,
+  "growing_noplan_total_bn": 1397.1491508143606,
+  "growing_per_01pp_bn": 143.29734880147288,
+  "growing_uplift_bn": 458.59626308079555,
+  "gap_consol_bn": 282.73816536066,
+  "gap_closed_by_growth_share": 0.16635714567269155,
+  "marketable_share_of_total_debt": 0.7937655860349128
+}

@@ -1,0 +1,180 @@
+{
+ "runs": {
+  "COMB_C_mce": {
+   "iterations": [
+    {
+     "iter": 0,
+     "max_df_pp": 3.6109788507794653,
+     "max_dreceipts_bn": 1147.5422931950354
+    },
+    {
+     "iter": 1,
+     "max_df_pp": 1.7692197398298766,
+     "max_dreceipts_bn": 567.6666896612451
+    },
+    {
+     "iter": 2,
+     "max_df_pp": 0.866491328047609,
+     "max_dreceipts_bn": 277.12367580951764
+    },
+    {
+     "iter": 3,
+     "max_df_pp": 0.3862728026552511,
+     "max_dreceipts_bn": 118.55932982900026
+    },
+    {
+     "iter": 4,
+     "max_df_pp": 0.1488500007055591,
+     "max_dreceipts_bn": 44.1109514321538
+    },
+    {
+     "iter": 5,
+     "max_df_pp": 0.05345710350076249,
+     "max_dreceipts_bn": 15.654487387249446
+    },
+    {
+     "iter": 6,
+     "max_df_pp": 0.01901408536976401,
+     "max_dreceipts_bn": 5.582844391001572
+    },
+    {
+     "iter": 7,
+     "max_df_pp": 0.006845211526297135,
+     "max_dreceipts_bn": 2.016675710185382
+    }
+   ],
+   "post_sync_max_|f-rff|_pp": 0.002478529720340461
+  },
+  "COMB_B_mce": {
+   "iterations": [
+    {
+     "iter": 0,
+     "max_df_pp": 3.5992430814559815,
+     "max_dreceipts_bn": 1142.4935859815755
+    },
+    {
+     "iter": 1,
+     "max_df_pp": 1.7567529868605054,
+     "max_dreceipts_bn": 563.0494058838808
+    },
+    {
+     "iter": 2,
+     "max_df_pp": 0.8747646799810647,
+     "max_dreceipts_bn": 281.70671240024103
+    },
+    {
+     "iter": 3,
+     "max_df_pp": 0.4093041120195693,
+     "max_dreceipts_bn": 127.64222836400586
+    },
+    {
+     "iter": 4,
+     "max_df_pp": 0.16762696960976164,
+     "max_dreceipts_bn": 50.533551250855
+    },
+    {
+     "iter": 5,
+     "max_df_pp": 0.06331219937006871,
+     "max_dreceipts_bn": 18.77152053165537
+    },
+    {
+     "iter": 6,
+     "max_df_pp": 0.023342368801182012,
+     "max_dreceipts_bn": 6.915808592113535
+    },
+    {
+     "iter": 7,
+     "max_df_pp": 0.008673247528874661,
+     "max_dreceipts_bn": 2.578199885489539
+    }
+   ],
+   "post_sync_max_|f-rff|_pp": 0.003247203849635838
+  },
+  "COMB_C_high_mce": {
+   "iterations": [
+    {
+     "iter": 0,
+     "max_df_pp": 5.329043504644286,
+     "max_dreceipts_bn": 1686.3601961307104
+    },
+    {
+     "iter": 1,
+     "max_df_pp": 2.576515978965465,
+     "max_dreceipts_bn": 820.5330437246805
+    },
+    {
+     "iter": 2,
+     "max_df_pp": 1.2130737772347766,
+     "max_dreceipts_bn": 384.08022962998393
+    },
+    {
+     "iter": 3,
+     "max_df_pp": 0.5248711417536915,
+     "max_dreceipts_bn": 159.87286523583543
+    },
+    {
+     "iter": 4,
+     "max_df_pp": 0.19858953950970548,
+     "max_dreceipts_bn": 58.632127430219725
+    },
+    {
+     "iter": 5,
+     "max_df_pp": 0.0708410213045978,
+     "max_dreceipts_bn": 20.716231203326515
+    },
+    {
+     "iter": 6,
+     "max_df_pp": 0.02511214562644426,
+     "max_dreceipts_bn": 7.365034502487333
+    },
+    {
+     "iter": 7,
+     "max_df_pp": 0.009005094763509192,
+     "max_dreceipts_bn": 2.649012732640813
+    }
+   ],
+   "post_sync_max_|f-rff|_pp": 0.0032447847201098057
+  },
+  "COMB_C_var": {
+   "iterations": [
+    {
+     "iter": 0,
+     "max_df_pp": 2.9572955240511916,
+     "max_dreceipts_bn": 925.3297244290964
+    },
+    {
+     "iter": 1,
+     "max_df_pp": 0.9695910821723506,
+     "max_dreceipts_bn": 302.47549173415996
+    },
+    {
+     "iter": 2,
+     "max_df_pp": 0.36672656577447915,
+     "max_dreceipts_bn": 119.36866266677043
+    },
+    {
+     "iter": 3,
+     "max_df_pp": 0.13597170118116653,
+     "max_dreceipts_bn": 41.22672614986391
+    },
+    {
+     "iter": 4,
+     "max_df_pp": 0.03763561311460606,
+     "max_dreceipts_bn": 10.017690184078674
+    },
+    {
+     "iter": 5,
+     "max_df_pp": 0.00738257585037605,
+     "max_dreceipts_bn": 1.7118553633056308
+    }
+   ],
+   "post_sync_max_|f-rff|_pp": 0.0010547317157811875
+  }
+ },
+ "errors": {},
+ "title2_central_total_bn": 6110.0,
+ "residual_central_bn": 2523.4000000000015,
+ "title2_high_total_bn": 7310.0,
+ "residual_high_bn": 10729.999999999998,
+ "wall_seconds": 124.73557949066162
+}
